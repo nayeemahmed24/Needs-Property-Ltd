@@ -1,0 +1,607 @@
+﻿@using DataRepository
+@model List<DataRepository.ProjectDetail>
+
+
+<div class="banner-slider-wrapper ls-direction-fix ls-overflow-visible">
+    
+    <div id="layerslider" class="fitvidsignore ls-v6 ls-container ls-fullsize layerslider-loaded"
+         style="width: 1519px; height: 706px; margin-left: 0px; margin-right: auto; position: relative; max-width: none; visibility: visible;"
+         data-layerslider-uid="LS4ky1qi8u3">
+
+        <div class="ls-inner" style="background: none transparent;">
+            <div class="ls-background-videos"></div>
+            <div class="ls-slide-backgrounds">
+                <div class="ls-wrapper ls-bg-outer" style="z-index: 1; width: 1519px; height: 754px;">
+                    <div class="ls-wrapper ls-bg-wrap"
+                         style="background-color: transparent; display: none; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <img src="~/images/1561963363eZ2Pu.jpg"
+                             class="ls-bg"  data-slidein="1" data-slideout="1"
+                             style="margin: 0px; z-index: auto; width: 1519px; height: 1013px; padding: 0px; border-width: 0px; border-radius: 0px; x: 0px; y: -129.5px; transform: translateX(0px) translateY(-129.5px); filter: none;">
+                    </div>
+                </div>
+                <div class="ls-wrapper ls-bg-outer" style="z-index: 1; width: 1519px; height: 754px;">
+                    <div class="ls-wrapper ls-bg-wrap" style="background-color: transparent; display: none;">
+                        <img src="~/images/1600189061xIcwS.jpg"
+                             class="ls-bg"  data-slidein="2" data-slideout="2"
+                             style="margin: 0px; z-index: auto; width: 1519px; height: 1013px; padding: 0px; border-width: 0px; border-radius: 0px; x: 0px; y: -129.5px; transform: translateX(0px) translateY(-129.5px);">
+                    </div>
+                </div>
+                <div class="ls-wrapper ls-bg-outer" style="z-index: 1; width: 1519px; height: 706px;">
+                    <div class="ls-wrapper ls-bg-wrap" style="background-color: transparent; display: block;">
+                        <img src="~/images/cov.jpg"
+                             class="ls-bg"  data-slidein="3" data-slideout="3"
+                             style="margin: 0px; z-index: auto; width: 1519px; height: 855px; padding: 0px; border-width: 0px; border-radius: 0px; x: 0px; y: -74.5px; transform: translateX(0px) translateY(-74.5px);">
+                    </div>
+                </div>
+                <div class="ls-wrapper ls-bg-outer" style="z-index: 1;">
+                    <div class="ls-wrapper ls-bg-wrap" style="background-color: transparent;">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="ls-layers"></div>
+        </div>
+        <div class="ls-gui-element ls-loading-container" style="display: none;">
+            <div class="ls-loading-indicator"></div>
+        </div>
+        <div class="ls-gui-element ls-shadow" data-parallax="disabled"></div>
+    </div>
+
+    <div class="circle-menu">
+        <div class="circle-inner">
+            <h2 class="slogan">
+                <span>Setting Standards</span>
+                <span>Explore</span>
+            </h2>
+        </div>
+        <ul class="circle-text text-uppercase" style="position: relative; visibility: visible; height: 90.1164px;">
+            <li>
+                <a href="@Url.Action("Ongoing")" aria-label="   Ongoing   |"><span class="char1" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(60.2296deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char2" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(58.1587deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char3" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(56.0877deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char4" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.375em; transform: rotate(53.1539deg); transform-origin: center -10.375em; bottom: 0px;">O</span><span class="char5" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.375em; transform: rotate(49.1846deg); transform-origin: center -10.375em; bottom: 0px;">n</span><span class="char6" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.34375em; transform: rotate(45.2153deg); transform-origin: center -10.375em; bottom: 0px;">g</span><span class="char7" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.375em; transform: rotate(41.2461deg); transform-origin: center -10.375em; bottom: 0px;">o</span><span class="char8" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(38.1397deg); transform-origin: center -10.375em; bottom: 0px;">i</span><span class="char9" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.375em; transform: rotate(35.0333deg); transform-origin: center -10.375em; bottom: 0px;">n</span><span class="char10" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.34375em; transform: rotate(31.064deg); transform-origin: center -10.375em; bottom: 0px;">g</span><span class="char11" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(28.1302deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char12" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(26.0592deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char13" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(23.9883deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char14" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(22.0899deg); transform-origin: center -10.375em; bottom: 0px;">|</span></a>
+            </li>
+            <!-- <li>
+            <a href="/projects/ongoing"> &nbsp; Ongoing &nbsp; |</a>
+        </li> -->
+            <li>
+                <a href="@Url.Action("Completed")" aria-label="  Completed   |  "><span class="char1" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(20.1916deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char2" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(18.1207deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char3" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.34375em; transform: rotate(15.1868deg); transform-origin: center -10.375em; bottom: 0px;">C</span><span class="char4" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.375em; transform: rotate(11.3901deg); transform-origin: center -10.375em; bottom: 0px;">o</span><span class="char5" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.4375em; transform: rotate(7.07568deg); transform-origin: center -10.375em; bottom: 0px;">m</span><span class="char6" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.3125em; transform: rotate(2.76124deg); transform-origin: center -10.375em; bottom: 0px;">p</span><span class="char7" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.3125em; transform: rotate(-0.862888deg); transform-origin: center -10.375em; bottom: 0px;">l</span><span class="char8" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.3125em; transform: rotate(-4.31444deg); transform-origin: center -10.375em; bottom: 0px;">e</span><span class="char9" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.3125em; transform: rotate(-7.93857deg); transform-origin: center -10.375em; bottom: 0px;">t</span><span class="char10" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.3125em; transform: rotate(-11.5627deg); transform-origin: center -10.375em; bottom: 0px;">e</span><span class="char11" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.3125em; transform: rotate(-15.1868deg); transform-origin: center -10.375em; bottom: 0px;">d</span><span class="char12" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(-18.1207deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char13" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(-20.1916deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char14" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(-22.2625deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char15" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(-24.1609deg); transform-origin: center -10.375em; bottom: 0px;">|</span><span class="char16" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(-26.0592deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char17" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(-28.1302deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span></a>
+            </li>
+            <!-- <li>
+            <a href="/projects/completed">&nbsp; Completed &nbsp; | &nbsp;</a>
+        </li> -->
+            <li>
+                <a href="@Url.Action("Upcoming")" aria-label=" Upcoming"><span class="char1" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.15625em; transform: rotate(-30.2011deg); transform-origin: center -10.375em; bottom: 0px;">&nbsp;</span><span class="char2" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.34375em; transform: rotate(-33.1349deg); transform-origin: center -10.375em; bottom: 0px;">U</span><span class="char3" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.3125em; transform: rotate(-36.9316deg); transform-origin: center -10.375em; bottom: 0px;">p</span><span class="char4" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.34375em; transform: rotate(-40.7283deg); transform-origin: center -10.375em; bottom: 0px;">c</span><span class="char5" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.375em; transform: rotate(-44.525deg); transform-origin: center -10.375em; bottom: 0px;">o</span><span class="char6" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.4375em; transform: rotate(-48.8395deg); transform-origin: center -10.375em; bottom: 0px;">m</span><span class="char7" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.1875em; transform: rotate(-52.291deg); transform-origin: center -10.375em; bottom: 0px;">i</span><span class="char8" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.375em; transform: rotate(-55.3974deg); transform-origin: center -10.375em; bottom: 0px;">n</span><span class="char9" aria-hidden="true" style="position: absolute; left: 50%; margin-left: -0.34375em; transform: rotate(-59.3667deg); transform-origin: center -10.375em; bottom: 0px;">g</span></a>
+            </li>
+            <!-- <li>
+            <a href="/projects/upcoming">&nbsp;Upcoming &nbsp; | &nbsp;</a>
+        </li> -->
+        </ul>
+        <div class="circle-bg" data-color="170, 160, 0, 1" style="background-color: rgb(170, 160, 0);"></div>
+        <!-- <div class="init-animation loader-line-mask">
+        <div class="loader-line"></div>
+    </div> -->
+    </div>
+</div>
+
+
+<section id="lands-to-landmark" class="section-gap parallax-container" data-stellar-background-ratio="0.1"
+         style="background-image: url(&quot;/themes/real_estate/assets/img/cy-sketch.jpg&quot;); background-position: 0% 5.38px;margin-left: 4%;">
+    <div class="container-fluid">
+        <div class="row mb-40">
+            <div class="col-sm-7 col-md-12">
+                <h2 class="heading-primary style-1">WITNESS, AS WE TRANSFORM <br>YOUR LAND TO A LANDMARK</h2>
+                <p>
+                    Partner with the best Artisan, to transform your land into a milestone of aesthetic marvel
+                    and superior value.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="carousel-wrapper has-shadow">
+                    <div class="carousel-primary slick-theme slick-initialized slick-slider">
+
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox"
+                                 style="opacity: 1; width: 3591px; transform: translate3d(0px, 0px, 0px);">
+
+                                @foreach (var project in @Model)
+                                {
+
+                                    <div class="carousel-item slick-slide slick-current slick-active"
+                                         data-slick-index="2" aria-hidden="false" tabindex="-1" role="option"
+                                         aria-describedby="slick-slide00" style="width: 513px;">
+                                        <div class="inner">
+                                            <a href="@Url.Action("ProjectDetails",new {name = @project.Name})" tabindex="0">
+                                                <div class="image-thumb high-contrast">
+                                                    <img src="~/images/@project.CoverImage"
+                                                         alt="@project.Name" title="@project.Name">
+                                                </div>
+                                                <h3 class="title">@project.Name</h3>
+                                                <h5 class="sub-title">@project.Address</h5>
+                                                @if (@project.CurrentStatus == Status.Ongoing)
+                                                {
+                                                    <span class="read-more">
+                                                        Ongoing
+                                                    </span>
+                                                }
+                                                else if (@project.CurrentStatus == Status.Completed)
+                                                {
+                                                    <span class="read-more">
+                                                        Completed
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="read-more">
+                                                        Upcoming
+                                                    </span>
+                                                }
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section class="section-gap pt-100 bg-light-grey why-us pb-0 bg-cover-center parallax-container parallax-img"
+         data-stellar-background-ratio="0.1"
+         style="background-image: url('@Url.Content("~/images/cov22.jpg")'); background-position: 50% 107.506px;"
+         data-image-src="~/images/cov22.jpg">
+    <div class="container-fluid">
+        <div class="mb-30 hide">
+            <h2 class="heading-primary  text-white">
+                WHY NEEDS Properties
+            </h2>
+        </div>
+        <div class="row pt-70 mobile-pt-0">
+            <div class="col-sm-6 col-md-5 ">
+                <h2 class="heading-primary  text-white">
+                    WHY NEEDS Properties
+                </h2>
+                <div class="text-white">
+                    <p>
+                        NEEDS Properties aspires to weave an unprecedented experience of fine living cocooned in comfort
+                        for you. It’s the statement of prestige and elegant Architecture that sets us apart.
+                    </p>
+                </div>
+                <div class="mb-30">
+                    
+                </div>
+
+                <div class="image-box-holder flow-down hide">
+                    <div class="image-box  "
+                         style="background-image: url(/admin/uploads/product/unnamed-Gulshan2/450x600/1598755202KHKOY.jpg);">
+                        <div class="inner-content text-white text-bold">
+                            <p>
+                                NEEDS Properties aspires to weave an unprecedented experience of fine living cocooned in
+                                comfort for you. It’s the statement of prestige and elegant Architecture that
+                                sets us apart.
+                            </p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-md-offset-1 mb-70 mobile-mb-0">
+                <div class="bordered-tiles our-specility-lightbox-wrapper mobile-mb-0 stagger-wrapper mb-0">
+                    <div class="row  parent">
+
+
+                        <div class="col-xs-4 col-sm-6 col-md-4 borderd-tile-item mb-30 no-border sm">
+                            <a  class="lbox-btn">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="table-all">
+                                            <span class="vertical-center">
+                                                <span class="tile-text">
+                                                    Prime Locations
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-xs-4 col-sm-6 col-md-4 borderd-tile-item mb-30 no-border sm">
+                            <a  class="lbox-btn">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="table-all">
+                                            <span class="vertical-center">
+                                                <span class="tile-text">
+                                                    Top Consultants
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-xs-4 col-sm-6 col-md-4 borderd-tile-item mb-30 no-border sm">
+                            <a class="lbox-btn">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="table-all">
+                                            <span class="vertical-center">
+                                                <span class="tile-text">
+                                                    Highest Quality Materials
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-xs-4 col-sm-6 col-md-4 borderd-tile-item mb-30 no-border sm">
+                            <a  class="lbox-btn">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="table-all">
+                                            <span class="vertical-center">
+                                                <span class="tile-text">
+                                                    Uncompromised Safety
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-xs-4 col-sm-6 col-md-4 borderd-tile-item mb-30 no-border sm">
+                            <a " class="lbox-btn">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="table-all">
+                                            <span class="vertical-center">
+                                                <span class="tile-text">
+                                                    On-time Delivery
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-xs-4 col-sm-6 col-md-4 borderd-tile-item mb-30 no-border sm">
+                            <a  class="lbox-btn">
+                                <div class="inner">
+                                    <div class="content">
+                                        <div class="table-all">
+                                            <span class="vertical-center">
+                                                <span class="tile-text">
+                                                    Professional Management
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                    <div class="visible-xs ">
+                        <a href="#"
+                           class="button button-outline button-outline-white mt-30 mb-100">
+                            Explore
+                        </a>
+                    </div>
+                    <div class="lightbox-content-wrapper">
+
+                        <div id="specility-lightbox-1" class="specility-lightbox-item text-left bg-white ">
+                            <a href="#" class="close-lightbox text-30">
+                                <img src="~/images/global-menu-close-black.svg"
+                                     alt="close">
+                            </a>
+                            <div class="inner mCustomScrollbar _mCS_4 mCS_no_scrollbar">
+                                <div id="mCSB_4" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                     tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_4_container"
+                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                         style="position:relative; top:0; left:0;" dir="ltr">
+                                        <h3 class="title text-18 mb-20">Prime Locations</h3>
+                                        <div class="desc">
+                                            <p>
+                                                We offer a selection from the most lucrative locations across the
+                                                city. Our project locations are selected intelligently, keeping
+                                                in mind the things that matter to you most.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="mCSB_4_scrollbar_vertical"
+                                         class="mCSB_scrollTools mCSB_4_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                         style="display: none;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_4_dragger_vertical" class="mCSB_dragger"
+                                                 style="position: absolute; min-height: 30px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="specility-lightbox-2" class="specility-lightbox-item text-left bg-white ">
+                            <a href="#" class="close-lightbox text-30">
+                                <img src="~/images/global-menu-close-black.svg"
+                                     alt="close">
+                            </a>
+                            <div class="inner mCustomScrollbar _mCS_5 mCS_no_scrollbar">
+                                <div id="mCSB_5" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                     tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_5_container"
+                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                         style="position:relative; top:0; left:0;" dir="ltr">
+                                        <h3 class="title text-18 mb-20">Top Consultants</h3>
+                                        <div class="desc">
+                                            We engage the leading consultants in their respective fields from
+                                            both home and abroad, to ensure that every facet of a project is
+                                            designed to perfection. After all, the best designs can only come
+                                            from the best minds.
+                                        </div>
+                                    </div>
+                                    <div id="mCSB_5_scrollbar_vertical"
+                                         class="mCSB_scrollTools mCSB_5_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                         style="display: none;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_5_dragger_vertical" class="mCSB_dragger"
+                                                 style="position: absolute; min-height: 30px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="specility-lightbox-3" class="specility-lightbox-item text-left bg-white ">
+                            <a href="#" class="close-lightbox text-30">
+                                <img src="~/images/global-menu-close-black.svg"
+                                     alt="close">
+                            </a>
+                            <div class="inner mCustomScrollbar _mCS_6 mCS_no_scrollbar">
+                                <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                     tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_6_container"
+                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                         style="position:relative; top:0; left:0;" dir="ltr">
+                                        <h3 class="title text-18 mb-20">Highest Quality Materials</h3>
+                                        <div class="desc">
+                                            <p>
+                                                We continuously explore material sourcing globally to enhance the
+                                                comfort and lifestyle of our clients.
+                                                Each material used in our projects is selected with the utmost
+                                                attention to quality,&nbsp;suitability and
+                                                durability.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="mCSB_6_scrollbar_vertical"
+                                         class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                         style="display: none;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                                 style="position: absolute; min-height: 30px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="specility-lightbox-4" class="specility-lightbox-item text-left bg-white ">
+                            <a href="#" class="close-lightbox text-30">
+                                <img src="~/images/global-menu-close-black.svg"
+                                     alt="close">
+                            </a>
+                            <div class="inner mCustomScrollbar _mCS_7 mCS_no_scrollbar">
+                                <div id="mCSB_7" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                     tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_7_container"
+                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                         style="position:relative; top:0; left:0;" dir="ltr">
+                                        <h3 class="title text-18 mb-20">Uncompromised Safety</h3>
+                                        <div class="desc">
+                                            <p>
+                                                Our priority to safety is second to none. Structural,
+                                                electro-mechanical and fire safety stand paramount
+                                                in our planning and construction methodology, in order to ensure
+                                                your safety in your sanctuary.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="mCSB_7_scrollbar_vertical"
+                                         class="mCSB_scrollTools mCSB_7_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                         style="display: none;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_7_dragger_vertical" class="mCSB_dragger"
+                                                 style="position: absolute; min-height: 30px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="specility-lightbox-5" class="specility-lightbox-item text-left bg-white ">
+                            <a href="#" class="close-lightbox text-30">
+                                <img src="~/images/global-menu-close-black.svg"
+                                     alt="close">
+                            </a>
+                            <div class="inner mCustomScrollbar _mCS_8 mCS_no_scrollbar">
+                                <div id="mCSB_8" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                     tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_8_container"
+                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                         style="position:relative; top:0; left:0;" dir="ltr">
+                                        <h3 class="title text-18 mb-20">On-time Delivery</h3>
+                                        <div class="desc">
+                                            <p>
+                                                Our experienced team of highly qualified engineers and management
+                                                professionals work relentlessly in
+                                                perfect synergy. At NEEDS Property, delivering uncompromised quality, on
+                                                time, has become our mantra.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="mCSB_8_scrollbar_vertical"
+                                         class="mCSB_scrollTools mCSB_8_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                         style="display: none;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_8_dragger_vertical" class="mCSB_dragger"
+                                                 style="position: absolute; min-height: 30px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="specility-lightbox-6" class="specility-lightbox-item text-left bg-white ">
+                            <a href="#" class="close-lightbox text-30">
+                                <img src="~/images/global-menu-close-black.svg"
+                                     alt="close">
+                            </a>
+                            <div class="inner mCustomScrollbar _mCS_9 mCS_no_scrollbar">
+                                <div id="mCSB_9" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                     tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_9_container"
+                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                         style="position:relative; top:0; left:0;" dir="ltr">
+                                        <h3 class="title text-18 mb-20">On-Time Delivery</h3>
+                                        <div class="desc">
+                                            <p>
+                                                A safe, clean and comfortable living environment can only be
+                                                maintained by a team of professionals
+                                                with an eye for perfection. Our Facility Management team will
+                                                ensure your desire to live in a beautiful
+                                                community remains fulfilled.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="mCSB_9_scrollbar_vertical"
+                                         class="mCSB_scrollTools mCSB_9_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                         style="display: none;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_9_dragger_vertical" class="mCSB_dragger"
+                                                 style="position: absolute; min-height: 30px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-gap pb-50 bg-light-grey">
+    <div class="container-fluid">
+        <div class="row">
+@*             <div class="col-sm-6 mb-30"> *@
+@*                 <h2 class="mb-30"> *@
+@*                     <span> *@
+@*                         <img class="social-icon" *@
+@*                              src="~/images/youtube.svg" *@
+@*                              alt="Instagram">Youtube *@
+@*                     </span> *@
+@*                 </h2> *@
+@*                 <div class="youtube-wrapper"> *@
+@*                     <iframe width="100%" height="98%" *@
+@*                             src="~/images/fdxY4LCdQIY.html" *@
+@*                             frameborder="0" *@
+@*                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" *@
+@*                             allowfullscreen="" style=" *@
+@*         position: absolute; *@
+@*         left: 0; *@
+@*         top: 7px; "></iframe> *@
+@*                 </div> *@
+@*             </div> *@
+@*             <div class="col-sm-6 mb-30"> *@
+@*                 <h2 class="mb-30"> *@
+@*                     <span> *@
+@*                         <img class="social-icon" *@
+@*                              src="~/images/so-ins-black.svg" *@
+@*                              alt="Instagram">Instagram *@
+@*                     </span> *@
+@*                 </h2> *@
+@*                 <div id="instagram-gallery" class="social-feed social-feed-instagram row no-margin"> *@
+@*                     <a href="https://www.instagram.com/shantaholdings/?hl=en" target="_blank"> *@
+@*                         <img src="~/images/instagram_shanta.webp" *@
+@*                              width="100%" height="auto"> *@
+@*                     </a> *@
+@*                 </div> *@
+@*             </div> *@
+        </div>
+
+        @* *@
+        @* <h2 class="mb-30"> *@
+        @*     <span>SHANTA PINNACLE</span> *@
+        @* </h2> *@
+        @* <a class="tvc-btn" target="_blank" href="https://www.shantapinnacle.com/"> *@
+        @* *@
+        @*     <img src="~/images/tvc-img4.webp" *@
+        @*          style="width:100%;" alt=""> *@
+        @* *@
+        @* </a> *@
+    </div>
+</section>
+
+
+
+<style>
+    .youtube-wrapper {
+        width: 100%;
+        position: relative;
+        padding-bottom: 51%;
+    }
+</style>

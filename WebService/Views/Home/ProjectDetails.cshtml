@@ -1,0 +1,145 @@
+﻿@model DataRepository.ProjectDetail
+@{
+    ViewData["Title"] = "ProjectDetails";
+}
+<div class="banner-slider-wrapper overflow-hidden ls-direction-fix ls-overflow-visible">
+    
+    <div class="banner-bar">
+
+    </div>
+    <div class="section-gap project-detail-info fullscreen-content pb-0">
+        <div  style="background-color: #231F20; margin-bottom: 3.5%" class="overlay-layer"></div>
+        <div class="container-fluid full-height full-height-sm">
+
+            <div class="row full-height-sm project-title-row">
+                <div class="col-sm-5 col-md-5 project-short-info full-height full-height-sm">
+                    <h2 class="heading-primary text-white">
+                        @Model.Name
+                    </h2>
+                    <span>@Model.Address</span>
+                    <p class="mt-40">
+                        @Model.Description
+                    </p>
+                </div>
+            </div>
+            <div class="row  full-height-sm project-info-row">
+            </div>
+        </div>
+    </div>
+
+    <div id="layerslider" class="fitvidsignore ls-v6 ls-container ls-fullsize layerslider-loaded" style="width: 1519px; height: 698px; margin-left: 0px; margin-right: auto; position: relative; max-width: none; visibility: visible;" data-layerslider-uid="LSh9jnty9wu">
+
+        <div class="ls-inner" style="background: none transparent;"><div class="ls-background-videos"></div><div class="ls-slide-backgrounds"><div class="ls-wrapper ls-bg-outer" style="z-index: 1; width: 1519px; height: 698px;"><div class="ls-wrapper ls-bg-wrap" style="background-color: transparent; display: block; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><img src="~/images/roof1.jpg" class="ls-bg" alt="Projects Slide" data-slidein="1" data-slideout="1" style="margin: 0px; z-index: auto; width: 1519px; height: 1012px; padding: 0px; border-width: 0px; border-radius: 0px; x: 0px; y: -157px; transform: translateX(0px) translateY(-157px); filter: none;"></div></div></div><div class="ls-layers"></div></div><div class="ls-gui-element ls-loading-container" style="display: none;"><div class="ls-loading-indicator"></div></div><div class="ls-gui-element ls-shadow" data-parallax="disabled"></div>
+    </div>
+</div>
+
+
+<section id="at-a-glance" class=" our-background">
+    <div class="clearfix">
+        <div class="col-sm-7 no-pad parallax-holder col-sm-50-percent" style="background-image: url('@Url.Content("~/images/"+@Model.CoverImage)');">
+
+        </div>
+        <div class="col-sm-7 no-pad col-sm-push-7 col-sm-56-percent col-sm-push-48-percent">
+            <div class="content-holder no-before-after bg-white section-gap">
+                <h2 class="heading-primary style-1 mb-60">
+                    At a Glance
+                </h2>
+                <div class="feature-details-box-wrapper mb-50">
+                    <div class="feature-details mt-20">
+                        <ul class="list">
+                            @if (!string.IsNullOrEmpty(@Model.LandArea))
+                            {
+                                <li>
+                                    <span class="list-label">Land Area:</span>
+                                    <span class="list-info"> @Model.LandArea</span>
+                                </li>
+                            }
+
+                            @if (!string.IsNullOrEmpty(@Model.NumberOfFloors))
+                            {
+                                <li>
+                                    <span class="list-label">Number of Floors:</span>
+                                    <span class="list-info"> @Model.NumberOfFloors</span>
+                                </li>
+                            }
+                            @if (!string.IsNullOrEmpty(@Model.NumberOfAppartments))
+                            {
+                                <li>
+                                    <span class="list-label">Number of Apartments:</span>
+                                    <span class="list-info"> @Model.NumberOfAppartments</span>
+                                </li>
+                            }
+                        @if (!string.IsNullOrEmpty(@Model.CarParking))
+                        {
+                            <li>
+                                <span class="list-label">Number of Car Parking:</span>
+                                <span class="list-info"> @Model.CarParking</span>
+                            </li>
+
+                        }
+                        @if (!string.IsNullOrEmpty(@Model.SizeOfUnits))
+                        {
+                            <li>
+                                <span class="list-label">Floor Area:</span>
+                                <span class="list-info"> @Model.SizeOfUnits sft approx. </span>
+                            </li>
+                        }
+                        @if (!string.IsNullOrEmpty(@Model.Facing))
+                        {
+                            <li>
+                                <span class="list-label">Facing:</span>
+                                <span class="list-info"> @Model.Facing </span>
+                            </li>
+                       
+                        }
+                         
+                            
+                          </ul>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="features--amenities" class="section-gap section-gap-bottom-features_amenities features_amenities" >
+    <div class="container-fluid" style="margin-left: 4% ">
+        <div class="mb-80">
+            <h2 class="heading-primary text-off-white">
+                Features &amp; Amenities
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-5 col-md-push-7">
+                <div class="image-box-holder">
+                    <div class="image-box no-shadow " style="background-image: url('@Url.Content("~/images/"+@Model.CoverImage)');">
+                        <div class="inner-content text-white">
+                            <p class="text-bold hide">
+                            </p>
+                            <!-- <a href="" class="button button-outline button-outline-white mt-30">
+                                Explore
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-md-pull-5 no-margin image-box-side-content">
+                <div class="feature-details-box-wrapper mb-50">
+                    <div class="feature-details mt-20 text-white">
+                        Professionally Designed Landscaping & Lighting<br>
+                        <br>
+                        Rooftop Party Space<br>
+                        <br>
+                        Management Office<br />
+                        <br>
+                        Multi-level Basement Car Parking with Ventilation System<br>
+                        <br>
+                        Fire Fighting and Smoke Detection System<br>
+                        <br>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+﻿@model List<DataRepository.ProjectDetail>
+@{
+    ViewData["Title"] = "Ongoing";
+}
+
+<section class="banner-secondary projects-cat-banner">
+    <div class="container-fluid" style="margin-left: 4%">
+        <h1 class="heading-primary style-1">
+            <span>Ongoing<br></span>
+            Projects in progress
+        </h1>
+    </div>
+</section>
+
+<section class="projects-ongoing">
+    <div class="projects-wrapper">
+        <div class="clearfix mixitup-container" id="MixItUp178116">
+            @foreach (var project in @Model)
+            {
+                <div data-ref="mixitup-target" class="mixit-item residential   custom-col-xs-6 col-md-4 col-sm-6 no-pad square">
+                    <a href="@Url.Action("ProjectDetails",new {name = @project.Name})" >
+                        <div class="relative">
+                            <div class="bg-thumb high-contrast ">
+                                <div class="bg-thumb-inner" style="background-image:  url( '@Url.Content("~/images/"+@project.CoverImage)')">
+
+                                </div>
+                            </div>
+                            <div class="thumb-desc">
+                                <h4 class="project-name">@project.Name</h4>
+                                <span class="project-address">@project.Address</span>
+                            </div>
+                        </div>
+
+                    
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
