@@ -36,48 +36,66 @@ namespace WebService.Controllers
             return View(ongoings);
         }
 
+        [HttpGet("/management")]
         public IActionResult Managements()
         {
             return View();
         }
+        
+        [HttpGet("/ongoing")]
         public IActionResult Ongoing()
         {
             var projects = dataStore.GetAllOngoing();
             return View(projects);
         }
+        
+        [HttpGet("/all-projects")]
         public IActionResult AllProjects()
         {
             var projects = dataStore.AllProjectDetail();
             return View(projects);
         }
+        
+        [HttpGet("/upcoming")]
         public IActionResult Upcoming()
         {
             var projects = dataStore.GetAllUpcoming();
             return View(projects);
         }
+        
+        [HttpGet("/completed")]
         public IActionResult Completed()
         {
             var projects = dataStore.GetAllCompleted();
             return View(projects);
         }
+        
+        [HttpGet("/project/{name}")]
         public IActionResult ProjectDetails(string name)
         {
             var project = dataStore.FindProjectDetailByName(name);
             return View(project);
         }
+        
+        [HttpGet("/contract-us")]
         public IActionResult ContactUs()
         {
             return View();
         }
+        
+        [HttpGet("/about-us")]
         public IActionResult AboutUs()
         {
             return View();
         }
+        
+        [HttpGet("/privacy")]
         public IActionResult Privacy()
         {
             return View();
         }
 
+        [HttpGet("/error")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

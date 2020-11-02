@@ -3,63 +3,76 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <style type="text/css">
 
+    <style type="text/css">
         .navbar {
             transition: all 0.4s;
             background: rgba(0, 0, 0, 0.42);
         }
 
-            .navbar .nav-link {
-                color: #fff;
-                
-            }
+        .navbar .nav-link {
+            color: #fff;
+        }
 
-                .navbar .nav-link:hover,
-                .navbar .nav-link:focus {
-                    color: yellowgreen;
-                    text-decoration: none;
-                }
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: yellowgreen;
+            text-decoration: none;
+        }
 
+        .navbar .navbar-brand {
+            color: #fff;
+        }
+
+
+        /* Change navbar styling on scroll */
+        .navbar.active {
+            background: #fff;
+            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.active .nav-link {
+            color: #555;
+        }
+
+        .navbar.active .nav-link:hover,
+        .navbar.active .nav-link:focus {
+            color: #555;
+            text-decoration: none;
+            color: yellowgreen;
+        }
+
+        .navbar.active .navbar-brand {
+            color: #555;
+            
+        }
+        
+        
+        @@media (max-width: 575px) {
             .navbar .navbar-brand {
-                color: #fff;
+                color: #555;
+                font-size: 1rem;
             }
-
-
-            /* Change navbar styling on scroll */
-            .navbar.active {
-                background: #fff;
-                box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
-            }
-
-                .navbar.active .nav-link {
-                    color: #555;
-                }
-
-                    .navbar.active .nav-link:hover,
-                    .navbar.active .nav-link:focus {
-                        color: #555;
-                        text-decoration: none;
-                        color: yellowgreen;
-                    }
-
-                .navbar.active .navbar-brand {
-                    color: #555;
-                }
+        }
 
 
         /* Change navbar styling on small viewports */
-        @@media (max-width: 991.98px) {
+        @@media (max-width: 767px) {
             .navbar {
                 background: #fff;
             }
-
-                .navbar .navbar-brand, .navbar .nav-link {
-                    color: #555;
-                }
+            .navbar .navbar-brand, .navbar .nav-link {
+                color: #555;
+            }
+        }
+        
+        @@media (min-width: 768px) and (max-width: 991.98px) {
+            .nav-link{
+                font-size: 0.9rem;
+            }
         }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>NEEDS Property Limited </title>
     @* <link rel="apple-touch-icon" sizes="72x72" *@
     @*       href="https://shantaholdings.com/themes/real_estate/assets/img/apple-touch-icon.png"> *@
@@ -76,7 +89,8 @@
           rel="stylesheet" media="all">
     <link href="~/styles/style.min.css"
           rel="stylesheet" media="all">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
     <script src="~/scripts/bundle.min.js"></script>
     <script src="~/scripts/remote.js"></script>
 </head>
@@ -89,9 +103,6 @@
              alt="Needs Slide">
     </div>
 </div>
-
-
-
 
 
 <div class="site-main-wrapper  mm-page mm-slideout ls-overflow-visible" id="mm-0">
@@ -107,24 +118,36 @@
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="menu-wrapper">
-                                        <nav class="navbar navbar-expand-lg fixed-top py-3">
-                                            <div class="container"><a href="@Url.Action("Index")" class="navbar-brand text-uppercase font-weight-bold">Needs Property Limited</a>
-                                                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-righ"><i class="fa fa-bars"></i></button>
-            
+                                        <nav class="navbar navbar-expand-lg navbar-expand-md fixed-top py-3">
+                                            <div class="container">
+                                                <a href="@Url.Action("Index", "Home")" class="navbar-brand text-uppercase font-weight-bold">Needs Property Limited</a>
+                                                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">
+                                                    <i class="fa fa-bars"></i>
+                                                </button>
+                                                @*<a href="#navbarSupportedContent" class="btn btn-dark btn-lg mobile-menu-bar">
+                                                    <img src="~/images/menu.svg" alt="hamburger icon">
+                                                </a>*@
+
                                                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                                                     <ul class="navbar-nav ml-auto">
-                                                        <li class="nav-item active"><a href="@Url.Action("Index")" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+                                                        <li class="nav-item active">
+                                                            <a href="@Url.Action("Index", "Home")" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a>
+                                                        </li>
                                                         <li class="nav-item">
-                                                            <a href="@Url.Action("AllProjects")" class="nav-link text-uppercase font-weight-bold">Projects</a>
+                                                            <a href="@Url.Action("AllProjects", "Home")" class="nav-link text-uppercase font-weight-bold">Projects</a>
 
                                                         </li>
                                                         @* <li class="nav-item"><a href="@Url.Action("AboutUs")" class="nav-link text-uppercase font-weight-bold">About Us</a></li> *@
-                                                        <li class="nav-item"><a href="@Url.Action("Managements")" class="nav-link text-uppercase font-weight-bold">Our Management</a></li>
-                                                        <li class="nav-item"><a href="@Url.Action("ContactUs")" class="nav-link text-uppercase font-weight-bold">Contact Us</a></li>
+                                                        <li class="nav-item">
+                                                            <a href="@Url.Action("Managements", "Home")" class="nav-link text-uppercase font-weight-bold">Our Management</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a href="@Url.Action("ContactUs", "Home")" class="nav-link text-uppercase font-weight-bold">Contact Us</a>
+                                                        </li>
 
 
                                                     </ul>
-                                                   
+
                                                 </div>
                                             </div>
                                         </nav>
@@ -138,7 +161,6 @@
             </header>
 
         </div>
-
 
 
         <!-- Mobile Menu -->
@@ -155,10 +177,13 @@
                             <div class="col-sm-6">
                                 <div class="line"></div>
                                 <div class="copyright">
-                                    <p>© 2020 NEEDS Properties Limited
+                                    <p>
+                                        © 2020 NEEDS Properties Limited
                                         Designed &amp; Developed by
                                         <a class="hover-line" href="http://www.techpiperit.com/"
-                                           target="_blank">TechPiper</a>
+                                           target="_blank">
+                                            TechPiper
+                                        </a>
                                     </p>
                                 </div>
                             </div>
