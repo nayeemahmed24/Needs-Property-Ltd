@@ -143,3 +143,42 @@
         </div>
     </div>
 </section>
+@if (@Model.Images != null && @Model.Images.Count > 0)
+{
+    
+    <section id="interior--exterior&lt;br&gt;gallery" class="project-gallery pb-70 pt-70">
+        <div class="container-fluid">
+            <div class="mb-50">
+                <h1 class="heading-primary style-1">
+                    Gallery
+                </h1>
+            </div>
+        </div>
+
+        <div class="gallery-wrapper light-gallery">
+            <div class="overflow-hidden">
+            
+                @foreach (var images in @Model.Images)
+                {
+                
+                    <div class="col-xs-6 col-sm-4 col-md-4">
+                        <div class="row">
+                            <a>
+                                <div class="gallery-image-container high-contrast">
+                                    <div class="image-thumb">
+                                        <img src="~/images/@images" alt="">
+                                    </div>
+                                    <div class="gallery-image-hover">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                }            
+
+
+            </div>
+        </div>
+    </section>
+}
