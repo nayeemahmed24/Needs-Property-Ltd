@@ -95,7 +95,7 @@ namespace DataRepository
             ProjectDetail b = new ProjectDetail();
             b.Name = "NEEDS ADIRA";
             b.CurrentStatus = Status.Ongoing;
-            b.Address = "Plot# 3, Road# 5, Block# A,Section# 6, Mirpur, Dhaka";
+            b.Address = "Plot# 3, Road# 5, Block# A,Section# 6, Mirpur, Dhaka.";
             b.CarParking = "8";
             b.Facing = "North";
             b.LandArea = "3.75 Katha";
@@ -124,7 +124,7 @@ namespace DataRepository
 
             AllProjectDetails.Add(e);
 
-            // Nirjhora SopnoBilash ( Handover )
+            
             ProjectDetail f = new ProjectDetail();
             f.Name = "NEEDS NIRJHORA";
             f.CurrentStatus = Status.Completed;
@@ -133,6 +133,7 @@ namespace DataRepository
             f.CarParking = "6";
             f.CoverImage = "nirjhora.jpg";
             f.NumberOfAppartments = "5";
+            f.Description = "An exclusive address like no other, where prestige meets sophistication.";
             f.NumberOfFloors = "Ground + 5";
             AllProjectDetails.Add(f);
 
@@ -144,6 +145,7 @@ namespace DataRepository
             g.LandArea = "2.5 Katha";
             g.CarParking = "6";
             g.NumberOfAppartments = "5";
+            g.Description = "An exclusive address like no other, where prestige meets sophistication.";
             g.NumberOfFloors = "Ground + 5";
             AllProjectDetails.Add(g);
 
@@ -155,7 +157,10 @@ namespace DataRepository
             h.CarParking = "5";
             h.NumberOfAppartments = "6";
             h.NumberOfFloors = "G + 6";
-
+            h.Description = "An exclusive address like no other, where prestige meets sophistication.";
+            h.CoverImage = "shopno.jpg";
+            h.Images = new List<string>();
+            AllProjectDetails.Add(h);
 
         }
 
