@@ -46,7 +46,7 @@ namespace DataRepository
             // NEEDS LATIF GARDEN
             ProjectDetail c = new ProjectDetail();
             c.Name = "NEEDS LATIF GARDEN";
-            c.LandArea = "3 Katha";
+            c.LandArea = "5.50 Katha";
             c.Address = "House# 12, Adarsha Nagar Main Road, Badda, Dhaka.";
             c.SizeOfUnits = "720-1465";
             c.CarParking = "9";
