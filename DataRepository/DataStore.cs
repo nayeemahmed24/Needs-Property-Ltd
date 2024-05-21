@@ -22,10 +22,11 @@ namespace DataRepository
             ProjectDetail a = new ProjectDetail();
             a.Name = "NEEDS DARUL MUNIM";
             a.Address = "353/6, South Paikpara, Jheelpar, Mirpur-1, Dhaka-1216";
-            a.CurrentStatus = Status.Ongoing;
+            a.CurrentStatus = Status.Completed;
             a.CarParking = "24";
             a.Facing = "North & East";
             a.LandArea = "11 Katha";
+            a.NumberOfAppartments = "36";
             a.NumberOfAppartments = "36";
             a.SizeOfUnits = "1232 - 1430";
             a.NumberOfFloors = "Ground + 9";
@@ -162,6 +163,26 @@ namespace DataRepository
             h.Images = new List<string>();
             AllProjectDetails.Add(h);
 
+            // Needs Kashem
+            ProjectDetail i = new ProjectDetail();
+            i.Name = "NEEDS KASHEM HEIGHTS";
+            i.Address = "33/B, North Pirerbagh, Mirpur, Dhaka";
+            i.CurrentStatus = Status.Ongoing;
+            i.CarParking = "16";
+            i.Facing = "North & East";
+            i.LandArea = "6.036 Katha";
+            i.NumberOfAppartments = "18";
+            i.SizeOfUnits = "1485";
+            i.NumberOfFloors = "Ground + 9";
+            i.CoverImage = "kashem.jpg";
+            i.Images = new List<string>();
+            i.Images.Add("kashem1.jpeg");
+            i.Images.Add("kashem2.jpeg");
+            i.Images.Add("kashem3.jpg");
+            i.Images.Add("kashem4.jpg");
+            i.Images.Add("kashem5.jpg");
+            i.Description = "Modern Ten Storied Residential Project, Situated in a very prestigious residential area of the capital";
+            AllProjectDetails.Add(i);
         }
 
         public List<ProjectDetail> GetAllOngoing()
